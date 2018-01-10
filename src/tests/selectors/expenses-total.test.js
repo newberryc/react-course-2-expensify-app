@@ -8,11 +8,11 @@ test('should return 0 for empty array', () => {
 
 test('should return amount from a single expense', () => {
   const total = selectExpensesTotal([expenses[0]]);
-  expect(total).toBe(expenses[0].amount / 100);
+  expect(total).toBe(expenses[0].amount);
 });
 
 test('should return total amount for all expenses', () => {
-  const expensesTotal = (expenses[0].amount + expenses[1].amount + expenses[2].amount) / 100;
+  const expensesTotal = (expenses[0].amount + expenses[1].amount + expenses[2].amount);
   const total = selectExpensesTotal(expenses);
   expect(total).toBe(expensesTotal);
 });
